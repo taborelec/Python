@@ -1,9 +1,11 @@
+# These are required for loading source OS
 import os
 import sys
 
 import warnings # this is for GUI warnings
 warnings.filterwarnings("ignore")
 
+# Source files are the help functions abd is what tevisa calls.
 srcpath = os.path.realpath('SourceFiles')
 sys.path.append(srcpath)
 
