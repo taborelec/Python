@@ -114,6 +114,7 @@ resp = inst.send_scpi_query(':SYST:ERR?')
 print("Marker Error = ")
 print(resp)
 
+#You must set the segment to be played if not using tables. 
 cmd = ':FUNC:MODE:SEGM {0}'.format(segnum)
 inst.send_scpi_cmd(cmd)
 
