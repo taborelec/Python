@@ -27,6 +27,7 @@ sampleRateDAC = 1e9  # 1 GS/s
 segment_us = 100     # Total segment length in microseconds
 pulse_us = 10        # Pulse width in microseconds
 
+# The segment length must ne a multiple of 64
 # --- Calculate lengths ---
 desired_segment_len = int(segment_us * 1e-6 * sampleRateDAC)
 segment_len = round_up_64(desired_segment_len)  # Must be multiple of 64
