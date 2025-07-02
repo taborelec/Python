@@ -57,6 +57,7 @@ inst.send_scpi_cmd(f':TRAC:DEF 1, {segment_len}')
 inst.send_scpi_cmd(':TRAC:SEL 1')
 inst.write_binary_data('*OPC?; :TRAC:DATA', segment)
 
+#the command :FUNC:MODE:SEGM is required the play the waveform when not using TASK
 inst.send_scpi_cmd(':FUNC:MODE:SEGM 1')
 inst.send_scpi_cmd(':OUTP ON')
 inst.send_scpi_cmd(':INIT:CONT ON')
