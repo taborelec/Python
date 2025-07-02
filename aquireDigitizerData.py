@@ -94,6 +94,7 @@ print()
 # Read the data that was captured by channel 1:
 inst.send_scpi_cmd(':DIG:CHAN:SEL 1')
 wavlen = num_bytes // 2
+# The redback of this data must be of this form, the read back date is moved into the variable wav1, which size and type has been pre-allocatied.
 rc = inst.read_binary_data(':DIG:DATA:READ?', wav1, num_bytes)
 
 plt.plot(wav1)
